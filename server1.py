@@ -2,10 +2,13 @@ import socket
 import sys
 import ipgetter
 
+hostname=socket.gethostname()
+host=socket.gethostbyname(hostname)
 host=ipgetter.myip()
 port=int(sys.argv[1])
+wan=ipgetter.myip()
 
-print ("Your ip address is: " + host)
+print ("Your ip address is: " + wan)
 print ("Connecting on port: "+ str(port))
 
 
